@@ -1,0 +1,221 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* end of Eric Meyer reset code */
+
+/* Fonts used */
+@font-face {
+    font-family: 'chunkfiveroman';
+    src: url('../fonts/chunkfive.eot');
+    src: url('../fonts/chunkfive.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/chunkfive.woff') format('woff'),
+         url('../fonts/chunkfive.ttf') format('truetype'),
+         url('../fonts/chunkfive.svg#chunkfiveroman') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'junction_regularregular';
+    src: url('../fonts/junction.eot');
+    src: url('../fonts/junction.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/junction.woff') format('woff'),
+         url('../fonts/junction.ttf') format('truetype'),
+         url('../fonts/junction.svg#junction_regularregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'yanone_kaffeesatzregular';
+    src: url('../fonts/yanonekaffeesatz-regular.eot');
+    src: url('../fonts/yanonekaffeesatz-regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/yanonekaffeesatz-regular.woff') format('woff'),
+         url('../fonts/yanonekaffeesatz-regular.ttf') format('truetype'),
+         url('../fonts/yanonekaffeesatz-regular.svg#yanone_kaffeesatzregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    background-color: #e67e22;
+}
+
+.container {
+    background-color: white;
+    border-radius: 3px;
+    height: 100%;
+    margin-top: 50px;
+    text-align: center;
+    width: 600px;
+    box-shadow: 0px 3px 5px #000;
+    -moz-box-shadow: 0px 3px 5px #000;
+    -webkit-box-shadow: 0px 3px 5px #000;
+}
+
+#headline {
+    font-family: 'chunkfiveroman';
+    font-size: 48px;
+    margin-top: 20px;
+    margin-bottom: 16px;
+}
+
+.smallFont {
+    font-family: 'yanone_kaffeesatzregular';
+    font-size: 24px;
+}
+
+.inputForm {
+    margin-bottom: 30px;
+    vertical-align: middle;
+}
+
+#newItem {
+    font-size: 18px;
+    height: 32px;
+    width: 200px;
+    margin-left: 5px;
+    margin-right: 3px;
+    vertical-align: middle;
+}
+
+#addButton {
+    color: white;
+    width: 50px;
+    height: 28px;
+    font-family: 'yanone_kaffeesatzregular';
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #3498db;
+    border: 1px solid #3498db;
+    border-radius: 3px;
+    box-shadow: 0px 3px 5px #000;
+    -moz-box-shadow: 0px 3px 5px #000;
+    -webkit-box-shadow: 0px 3px 5px #000;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+}
+
+#addButton:hover {
+    position:relative;
+    top:3px;
+    box-shadow:none;
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+  }
+
+.clearList {
+    margin-top: 30px;
+}
+
+/* List of items to buy */
+li {
+    border: 1px solid #7f8c8d;
+    border-radius: 3px;
+    width: 400px;
+    list-style: none;
+    margin: auto;
+    -webkit-box-shadow: 0px 3px 0px #34495e;
+    -moz-box-shadow: 0px 3px 0px #34495e;
+    box-shadow: 0px 3px 0px #34495e;
+    line-height: 1.5em;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.trashItem {
+    background-image: url('../img/trashcan.png');
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: right;
+    display: inline-block;
+    width: 370px;
+}
+
+input.checkItOut {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/* Button to clear items already bought */
+#deleteList {
+    color: white;
+    width: 200px;
+    height: 30px;
+    font-family: 'yanone_kaffeesatzregular';
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 160px;
+    background-color: #27ae60;
+    border: 1px solid #27ae60;
+    border-radius: 3px;
+    box-shadow: 0px 3px 5px #000;
+    -moz-box-shadow: 0px 3px 5px #000;
+    -webkit-box-shadow: 0px 3px 5px #000;
+    display: inline-block;
+}
+
+#deleteList:hover {
+    position:relative;
+    top:3px;
+    box-shadow:none;
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+  }
+
+
+
+
+
+
