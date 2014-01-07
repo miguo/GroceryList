@@ -1,5 +1,17 @@
 $(document).ready(function() {
 
+
+/* Don't allow spaces at beginning of form field */
+	window.onload = function () {
+    	var space = document.getElementById("newItem");
+    	space.addEventListener("keydown", function (e) {
+        	if (e.keyCode == 32 && this.value.length==0) {
+            	e.preventDefault();
+        	}
+    	});
+	}
+
+
 /* Check off list items and move them to bottom of list, or uncheck to move to top of list */
 	function checkUncheck() {
 		$('[type="checkbox"]').on("click", function() {
@@ -29,19 +41,18 @@ $(document).ready(function() {
  		event.preventDefault();
 		var addItem = $('#newItem').val();
 		
-		$('.listItems').prepend('<li><input type="checkbox" class="checkItOut">'+ addItem + '</li>');
+		$('.listItems').prepend('<li><input type="checkbox" class="checkItOut"><span class="trashItem">'+ addItem + '</span></li>');
 		checkUncheck();
-		console.log("I'm on top!");
+		$('#shoppingList')[0].reset();
+		console.log("I've been added!");
 	});
 
 
 /* Use .slideToggle for trash can icon */
-/*	$('.trashItem').on("click", function() {
+	$('.trashItem').on("click", function() {
 		var trashThis = $(this).parent();
 		$(trashThis).slideToggle(400);
 	});
-
-*/
 
 
 /* Delete checked items off of list */
@@ -56,6 +67,9 @@ $(document).ready(function() {
 
 	});
 
+
+/* Make list items sortable */
+    	$('#sortable').sortable();
 
 
 
