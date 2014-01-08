@@ -175,12 +175,12 @@ li {
 }
 
 .trashItem {
-    background-image: url('../img/trashcan.png');
-    background-repeat: no-repeat;
-    background-size: 24px;
-    background-position: right;
+    float: right;
     display: inline-block;
-    width: 370px;
+    position: relative;
+    top: 3px;
+    right: 3px;
+    height: 30px;
 }
 
 input.checkItOut {
