@@ -215,6 +215,10 @@ input.checkItOut {
     -webkit-box-shadow:none;
   }
 
+#footer {
+    height: 150px;
+}
+
 
 
 
