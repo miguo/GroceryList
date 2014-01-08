@@ -65,7 +65,7 @@ $(document).ready(function() {
 
 		if(dialog === true) {
 			$(deleteItem).parent().detach();
-			console.log("Testing one two three");
+			console.log("Confirmed delete of checked items");
 		}
 
 	});
