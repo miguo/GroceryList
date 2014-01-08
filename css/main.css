@@ -160,6 +160,7 @@ body {
 
 /* List of items to buy */
 li {
+    background-color: white;
     border: 1px solid #7f8c8d;
     border-radius: 3px;
     width: 400px;
