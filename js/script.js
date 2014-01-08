@@ -19,13 +19,13 @@ $(document).ready(function() {
 			
 			if($(this).is(':checked')) {
 				$(listItem).css('text-decoration', 'line-through');
-				$(listItem).appendTo('.listItems');
+				$(listItem).appendTo('ul');
 				console.log("Bought this item already");
 			}
 
 			else {
 				$(listItem).css('text-decoration', 'none');
-				$('.listItems').prepend(listItem);
+				$('ul').prepend(listItem);
 				console.log("Need to buy this item");
 			}
 		});
@@ -41,7 +41,7 @@ $(document).ready(function() {
  		event.preventDefault();
 		var addItem = $('#newItem').val();
 		
-		$('.listItems').prepend('<li><input type="checkbox" class="checkItOut"><img class="trashItem" src="img/trashcan.png" alt="trash icon delete" />'+ addItem + '</li>');
+		$('ul').prepend('<li><input type="checkbox" class="checkItOut"><img class="trashItem" src="img/trashcan.png" alt="trash icon delete" />'+ addItem + '</li>');
 		checkUncheck();
 		$('#shoppingList')[0].reset();
 		console.log("I've been added!");
@@ -50,7 +50,7 @@ $(document).ready(function() {
 
 
 /* Use .slideToggle for trash can icon */
-	$('.trashItem').on("click", function() {
+	$('ul#sortable').on('click', '.trashItem', function() {
 		var trashThis = $(this).parent();
 		$(trashThis).slideToggle(400);
 		console.log("Delete me");
